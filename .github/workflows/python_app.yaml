@@ -2,7 +2,7 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
 # TODO: Change the workflow name to something more specific
-name: Python application
+name: Python application 
 
 # This defines the triggers for the workflow
 # i.e. when the workflow will run
@@ -63,21 +63,21 @@ jobs:
      - name: Install ruff
      run: uv add --dev ruff
 
-     
+     - name: Lint with ruff
      run: uv run ruff check .
 
 
     # TODO: Add steps to run formatting steps and type checking
     # Formatting check
-     - name: Install ruff
-     run: uv add --dev ruff
+     - name: Check formatting
+     run: uv run ruff format --check 
 
      
-     run: uv run ruff format --check .
 
    # Type checking
      - name: Install mypy
      run: uv add --dev mypy
 
      
-     run: uv run mypy .
+     - name: Type check with mypy
+     run: uv run mypy
