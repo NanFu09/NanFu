@@ -76,5 +76,5 @@ jobs:
      - name: Format imports with isort
       run: |
         uvx isort .
-     
+        
     
