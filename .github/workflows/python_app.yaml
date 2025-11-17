@@ -63,7 +63,7 @@ jobs:
      - name: Install ruff
      run: uv add --dev ruff
 
-     - name: Lint with ruff
+     
      run: uv run ruff check .
 
 
@@ -72,12 +72,12 @@ jobs:
      - name: Install ruff
      run: uv add --dev ruff
 
-     - name: Check formatting
+     
      run: uv run ruff format --check .
 
    # Type checking
      - name: Install mypy
      run: uv add --dev mypy
 
-     - name: Type check
+     
      run: uv run mypy .
